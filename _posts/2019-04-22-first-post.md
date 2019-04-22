@@ -7,7 +7,7 @@ categories: jekyll update
 #**Q1. K번째 수**
 
 > 배열 array의 i번째 숫자부터 j번째 숫자까지 자르고 정렬했을 때, k번째에 있는 수를 구하기
-> : *정렬 알고리즘*
+> :*정렬 알고리즘*
 
 
 
@@ -87,4 +87,106 @@ class Solution {
 
 }
 ```
+
+-------
+
+#**Q2. 가운데 글자 가져오기**
+
+> 단어 s의 가운데 글자를 반환하는 함수 만들기
+
+
+
+- **my solution** 
+
+```
+class Solution {
+  public String solution(String s) {
+      String answer = "";
+      int len = s.length();
+      if(len%2==0){
+          answer += s.charAt(len/2-1);
+          answer += s.charAt(len/2);
+      } else {
+          answer += s.charAt(len/2);
+      }
+      return answer;
+  }
+}
+```
+
+
+
+- **other solution**
+
+```
+class StringExercise{
+    String getMiddle(String word){
+        return word.substring((word.length()-1) / 2, word.length()/2 + 1);    
+    }
+}
+```
+
+-------
+
+#**Q3. 윤년 2016년 요일 구하기**
+
+>  두 수 a ,b를 입력받아 2016년 a월 b일이 무슨 요일인지 리턴하는 함수 만들기
+
+
+
+- **my solution** 
+
+```
+class Solution {
+  public String solution(int a, int b) {
+		String answer = "";
+
+		String[] week = { "SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT" };
+
+		int days = 0;
+		for (int i = 1; i < a; i++) {
+			if (i % 2 != 0) { // 홀수 월
+				days += 31;
+			} else if (i == 2) { // 2월
+				days += 29;
+			} else { // 2월 제외한 짝수 월
+				days += 30;
+			}
+		}
+
+		days += b;
+
+		int yo = days / 7 / 7;
+		answer = week[yo];
+
+		return answer;
+  }
+}
+```
+
+
+
+- **other solution**
+
+```
+class TryHelloWorld
+{
+    public String getDayName(int a, int b)
+    {
+     String answer = " ";
+        int[] monthDay={31,29,31,30,31,30,31,31,30,31,30,31};
+        for (int i = 1; i < a; i++) {
+            b+=monthDay[i-1];
+        }
+        switch(b%7){
+        case 3:answer="SUN";break;
+        case 4:answer="MON";break;
+        case 5:answer="TUE";break;
+        case 6:answer="WED";break;
+        case 0:answer="THU";break;
+        case 1:answer="FRI";break;
+        case 2:answer="SAT";break;
+        }
+```
+
 
