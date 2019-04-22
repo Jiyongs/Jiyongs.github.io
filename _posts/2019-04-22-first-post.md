@@ -4,11 +4,13 @@ date: 2019-04-22 20:00:28 -0400
 categories: jekyll update
 ---
 
-Q1. K번째 수
-배열 array의 i번째 숫자부터 j번째 숫자까지 자르고 정렬했을 때, k번째에 있는 수를 구하기.
+#**Q1. K번째 수**
+> 배열 array의 i번째 숫자부터 j번째 숫자까지 자르고 정렬했을 때, k번째에 있는 수를 구하기.</br>
 --> 정렬 알고리즘
 
-- my solution
+- **my solution** </br>
+
+<pre>
 class Solution {
     public int[] solution(int[] array, int[][] commands) {
         int comLen = commands.length;
@@ -58,8 +60,10 @@ class Solution {
 		return array;
     }
 }
+</pre>
 
-- other solution
+- **other solution** </br>
+<pre>
 import java.util.Arrays;
 class Solution {
     public int[] solution(int[] array, int[][] commands) {
@@ -74,6 +78,7 @@ class Solution {
         return answer;
     }
 }
+</pre>
 
 Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
 
