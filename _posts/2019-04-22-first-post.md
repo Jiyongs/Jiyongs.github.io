@@ -4,6 +4,8 @@ date: 2019-04-22 20:00:28 -0400
 categories: jekyll update
 ---
 
+#**<u>Language : Java</u>**
+
 #**Q1. K번째 수**
 
 > 배열 array의 i번째 숫자부터 j번째 숫자까지 자르고 정렬했을 때, k번째에 있는 수를 구하기
