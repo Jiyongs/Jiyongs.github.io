@@ -1,5 +1,5 @@
 ---
-title: "Coding Study #2:hatched_chick:"
+title: "Coding Study #3:hatched_chick:"
 date: 2019-05-01 18:50:00 -0400
 categories: jekyll update
 ---
